@@ -211,7 +211,7 @@ body {
   transition: all var(--transition-fast);
 }
 
-.search-button:hover:not(:disabled) {
+..search-button:hover:not(:disabled) {
   opacity: 0.9;
   transform: translateY(-1px);
   box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
@@ -220,6 +220,183 @@ body {
 .search-button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+@media (max-width: 767px) {
+  .search-form {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .search-input-wrapper {
+    width: 100%;
+  }
+
+  .search-input {
+    padding: 0.9rem 1rem 0.9rem 3rem;
+    font-size: 1rem;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    font-size: 0.95rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .app-container {
+    padding: 1.75rem 1.25rem 3rem;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .recommendation-card {
+    padding: 1.75rem;
+    align-items: stretch;
+  }
+
+  .rec-left {
+    min-width: auto;
+    gap: 1rem;
+  }
+
+  .score-gauge-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .overview-summary-card,
+  .tab-panel,
+  .thesis-column-box,
+  .reasoning-box,
+  .not-found-card,
+  .search-container {
+    padding: 1.5rem;
+  }
+
+  .panel-title {
+    font-size: 1.35rem;
+  }
+
+  .overview-summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .overview-company-title {
+    font-size: clamp(1.9rem, 5vw, 2.6rem);
+  }
+
+  .overview-subtitle,
+  .overview-score-card,
+  .news-card,
+  .search-input,
+  .search-button {
+    width: 100%;
+  }
+
+  .overview-subtitle {
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  .news-card {
+    padding: 1.25rem;
+  }
+
+  .thesis-columns {
+    gap: 1rem;
+  }
+
+  .thesis-column-box {
+    padding: 1.35rem;
+  }
+
+  .reasoning-box {
+    padding: 1.35rem;
+  }
+
+  .analysis-markdown {
+    font-size: 0.95rem;
+  }
+
+  .not-found-card {
+    padding: 1.5rem;
+  }
+
+  .not-found-header {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-container {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .recommendation-card {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .rec-left {
+    gap: 0.75rem;
+  }
+
+  .rec-company {
+    font-size: 1rem;
+  }
+
+  .overview-company-title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+
+  .overview-score-value {
+    font-size: 2.2rem;
+  }
+
+  .tab-panel {
+    padding: 1.25rem;
+  }
+
+  .panel-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .tabs-navigation {
+    gap: 0.75rem;
+  }
+
+  .tab-btn-nav {
+    font-size: 0.87rem;
+    padding: 0.55rem 0.2rem 0.75rem;
+  }
+
+  .overview-card-block {
+    gap: 1rem;
+  }
+
+  .source-links {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .thesis-column-box,
+  .reasoning-box,
+  .not-found-card {
+    padding: 1rem;
+  }
 }
 
 /* Quick Search Tags */
@@ -1449,6 +1626,99 @@ body {
 
 .news-card-link:hover {
   color: var(--text-primary);
+}
+
+@media (max-width: 767px) {
+  .app-container {
+    padding: 1.25rem 1rem 2.5rem;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .logo-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .search-container {
+    padding: 1.5rem;
+  }
+
+  .tabs-navigation {
+    gap: 1rem;
+    padding-bottom: 0;
+  }
+
+  .tab-btn-nav {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.2rem 0.8rem;
+  }
+
+  .tab-panel {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .panel-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .recommendation-card {
+    padding: 1.5rem;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rec-left {
+    gap: 1rem;
+    min-width: auto;
+  }
+
+  .score-gauge-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .overview-hero {
+    gap: 1rem;
+  }
+
+  .overview-company-title {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
+  .overview-subtitle {
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  .overview-score-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .overview-summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .overview-card-block {
+    gap: 1rem;
+  }
+
+  .source-links {
+    grid-template-columns: 1fr;
+  }
+
+  .news-card {
+    padding: 1.25rem;
+  }
 }
 
 /* Animations */
