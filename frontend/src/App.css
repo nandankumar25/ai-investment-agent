@@ -211,7 +211,7 @@ body {
   transition: all var(--transition-fast);
 }
 
-..search-button:hover:not(:disabled) {
+.search-button:hover:not(:disabled) {
   opacity: 0.9;
   transform: translateY(-1px);
   box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
