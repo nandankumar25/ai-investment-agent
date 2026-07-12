@@ -6,6 +6,7 @@ import {
   ShieldCheck, HelpCircle, Briefcase, DollarSign, Rss
 } from 'lucide-react';
 import './App.css';
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function App() {
   const [query, setQuery] = useState('');
@@ -26,7 +27,7 @@ export default function App() {
 
   const fetchStatus = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/health');
+      const res = await fetch(`${API_URL}/api/health`);
       if (res.ok) {
         const data = await res.json();
         setBackendStatus(data);
@@ -101,7 +102,7 @@ export default function App() {
     simulateLogs(searchQuery);
 
     try {
-      const res = await fetch('http://localhost:5000/api/research', {
+      const res = await fetch(`${API_URL}/api/research`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
